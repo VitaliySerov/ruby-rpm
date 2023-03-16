@@ -75,7 +75,7 @@ jobs:
               -t feedforce/ruby-rpm:<< parameters.version >>-builder \
               -f Dockerfile-7 \
               --target builder \
-              --cache-from=feedforce/ruby-rpm:centos7 \
+              --cache-from=ghcr.io/feedforce/ruby-rpm:centos7 \
               --build-arg RUBY_X_Y_VERSION=<< parameters.version >> \
               --progress plain \
               .
@@ -94,7 +94,7 @@ jobs:
               -t feedforce/ruby-rpm:<< parameters.version >>-tester \
               -f Dockerfile-7 \
               --target tester \
-              --cache-from=feedforce/ruby-rpm:<< parameters.version >>-builder \
+              --cache-from=ghcr.io/feedforce/ruby-rpm:<< parameters.version >>-builder \
               --build-arg RUBY_X_Y_VERSION=<< parameters.version >> \
               --progress plain \
               .
