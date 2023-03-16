@@ -25,3 +25,5 @@ jobs:
         tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:centos7
         platforms: linux/amd64,linux/arm64
         push: true
+        # See: https://github.com/community/community/discussions/45969
+        provenance: false
