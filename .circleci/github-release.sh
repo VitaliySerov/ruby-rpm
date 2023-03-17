@@ -10,8 +10,8 @@ need_to_release() {
 }
 
 get_github_release() {
-  version=v0.7.5
-  wget https://github.com/meterup/github-release/releases/download/${version}/linux-amd64-github-release.bz2
+  version=v0.10.0
+  wget https://github.com/github-release/github-release/releases/download/${version}/linux-amd64-github-release.bz2
   bzip2 -d linux-amd64-github-release.bz2
   chmod +x linux-amd64-github-release
   mkdir -p $HOME/bin
@@ -37,6 +37,9 @@ $HOME/bin/github-release release \
   --name "Ruby-${RUBY_VERSION}" \
   --description "not release" \
   --target master
+
+# Wait a few seconds after create release to avoid to error `could not find the release corresponding to tag ...`.
+sleep 5
 
 #
 # Upload rpm files and build a release note

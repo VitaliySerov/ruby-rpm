@@ -1,5 +1,5 @@
 Name: ruby
-Version: 2.7.7
+Version: 3.2.1
 Release: 1%{?dist}
 License: Ruby License/GPL - see COPYING
 URL: http://www.ruby-lang.org/
@@ -10,7 +10,7 @@ BuildRequires: readline-devel ncurses-devel gdbm-devel glibc-devel gcc openssl-d
 Source0: https://cache.ruby-lang.org/pub/ruby/ruby-%{version}.tar.gz
 Summary: An interpreter of object-oriented scripting language
 Group: Development/Languages
-Provides: ruby(abi) = 2.7
+Provides: ruby(abi) = 3.2
 Provides: ruby-irb
 Provides: ruby-rdoc
 Provides: ruby-libs
@@ -67,17 +67,26 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 
-* Thu Nov 24 2022 feedforce tech team <technical_staff@feedforce.jp> - 2.7.7
-- Update ruby version to 2.7.7
+* Wed Feb 08 2023 feedforce tech team <technical_staff@feedforce.jp> - 3.2.1
+- Update ruby version to 3.2.1
 
-* Tue Apr 12 2022 feedforce tech team <technical_staff@feedforce.jp> - 2.7.6
-- Update ruby version to 2.7.6
+* Wed Jan 04 2023 John Balyozian <jbalyozian@onedoor.com> - 3.2.0 
+- Update ruby version to 3.2.0
 
-* Wed Nov 24 2021 feedforce tech team <technical_staff@feedforce.jp> - 2.7.5
-- Update ruby version to 2.7.5
+* Tue Apr 12 2022 feedforce tech team <technical_staff@feedforce.jp> - 3.0.4
+- Update ruby version to 3.0.4
 
-* Wed Jul 07 2021 feedforce tech team <technical_staff@feedforce.jp> - 2.7.4
-- Update ruby version to 2.7.4
+* Wed Nov 24 2021 feedforce tech team <technical_staff@feedforce.jp> - 3.0.3
+- Update ruby version to 3.0.3
+
+* Wed Jul 07 2021 feedforce tech team <technical_staff@feedforce.jp> - 3.0.2
+- Update ruby version to 3.0.2
+
+* Wed Apr 07 2021 feedforce tech team <technical_staff@feedforce.jp> - 3.0.1
+- Update ruby version to 3.0.1
+
+* Wed Apr 07 2021 Tsubasa Takayama <t-takayama@feedforce.jp> - 3.0.0
+- Update ruby version to 3.0.0
 
 * Mon Apr 05 2021 feedforce tech team <technical_staff@feedforce.jp> - 2.7.3
 - Update ruby version to 2.7.3

@@ -24,25 +24,20 @@ We create a Pull Request automatically using CircleCI.
 
 This project uses Docker to build RPMs.
 
-The Docker images are hosted at [Docker Hub](https://hub.docker.com/).
+The Docker images are hosted at [GitHub Container Registry (ghcr.io)](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry).
 
-- For CentOS 7: [`feedforce/ruby-rpm:centos7`](https://hub.docker.com/r/feedforce/ruby-rpm/)
+- For CentOS 7: `ghcr.io/feedforce/ruby-rpm:centos7`
 
 ## How to build and push Docker image
 
+Build and push Docker image to ghcr.io from GitHub Actions.
+
 ### Manually
 
-You can also build Docker images manually.
+Currently, only manual execution using the workflow_dispatch event is supported.
 
-```
-$ docker login
-$ docker buildx create --use
-$ docker buildx build \
-    -t feedforce/ruby-rpm:centos7 \
-    -f Dockerfile-7 \
-    --target base \
-    --build-arg BUILDKIT_INLINE_CACHE=1 \
-    --platform=linux/amd64,linux/arm64 \
-    --push \
-    .
-```
+1. Open https://github.com/feedforce/ruby-rpm/actions/workflows/push-docker-image.yml
+1. Run workflow with master branch
+1. Wait until workflow succeededs
+1. Open https://github.com/feedforce/ruby-rpm/pkgs/container/ruby-rpm
+1. Check that a new image has been pushed
