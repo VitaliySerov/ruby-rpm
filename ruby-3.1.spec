@@ -1,5 +1,5 @@
 Name: ruby
-Version: 3.1.2
+Version: 3.1.3
 Release: 1%{?dist}
 License: Ruby License/GPL - see COPYING
 URL: http://www.ruby-lang.org/
@@ -67,8 +67,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 
-* Wed Aug 24 2022 Tsubasa Takayama <tsubasa.takayama@socialplus.jp> - 3.1.2
-- Update ruby version to 3.1.2
+* Fri Mar 17 2023 Tsubasa Takayama <tsubasa.takayama@socialplus.jp> - 3.1.3
+- Update ruby version to 3.1.3
 
 * Wed Nov 24 2021 feedforce tech team <technical_staff@feedforce.jp> - 3.0.3
 - Update ruby version to 3.0.3
