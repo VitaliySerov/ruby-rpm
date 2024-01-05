@@ -67,7 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 
-* Fri Jan 05 2024 feedforce tech team <technical_staff@feedforce.jp> - 3.3.0
+* Fri Jan 05 2024 Vitaliy Serov <vitaliy.serov@onlyoffice.com> - 3.3.0
 - Add new spec for ruby 3.3.0
 
 * Thu Mar 30 2023 feedforce tech team <technical_staff@feedforce.jp> - 3.2.2
